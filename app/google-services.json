@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "575882288355",
+    "firebase_url": "https://artistsfirebase-61217.firebaseio.com",
+    "project_id": "artistsfirebase-61217",
+    "storage_bucket": "artistsfirebase-61217.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575882288355:android:73c22e02241ea2fe",
+        "android_client_info": {
+          "package_name": "com.volianskyi.taras.artistsfirebase_61217"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575882288355-91pqrb9tua2urq1diltisa8t6c2c8qv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.volianskyi.taras.artistsfirebase_61217",
+            "certificate_hash": "61ea08e0c06e544e8eda032b940441fb90972db0"
+          }
+        },
+        {
+          "client_id": "575882288355-i0molbafpumm8onosr3bmaqfm7r695k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5chVMVTzL1MVJNuT1_0vs7VnT8L3Knrw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575882288355-i0molbafpumm8onosr3bmaqfm7r695k2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

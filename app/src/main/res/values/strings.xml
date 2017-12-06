@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ArtistsFirebase-6.12.17</string>
+
+    <array name="categories">
+        <item>Books</item>
+        <item>Cars</item>
+        <item>Phones</item>
+    </array>
+
+
+</resources>

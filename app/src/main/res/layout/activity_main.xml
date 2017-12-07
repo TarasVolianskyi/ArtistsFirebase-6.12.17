@@ -22,8 +22,20 @@
     </Spinner>
 
     <Button
-        android:id="@+id/btnMainActivity"
-        android:text="add "
+        android:id="@+id/btnUserMainActivity"
+        android:text="add user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnProdMainActivity"
+        android:text="add prod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnDeliverMainActivity"
+        android:text="add deliver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

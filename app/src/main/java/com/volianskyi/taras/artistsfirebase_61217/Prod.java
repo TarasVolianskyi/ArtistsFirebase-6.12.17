@@ -15,6 +15,14 @@ public class Prod {
 
     }
 
+    public Prod(String idProd, String nameProd, String priceProd, String prevPriceProd, String categorProd) {
+        this.idProd = idProd;
+        this.nameProd = nameProd;
+        this.priceProd = priceProd;
+        this.prevPriceProd = prevPriceProd;
+        this.categorProd = categorProd;
+    }
+
     public String getIdProd() {
         return idProd;
     }

@@ -21,9 +21,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText etName;
     Spinner spinner;
-    Button btn;
+    Button btnArtist;
+    Button btnProd;
+    Button btnDeliver;
 
     DatabaseReference databaseArtists;
+    DatabaseReference databaseProd;
+    DatabaseReference databaseDeliver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,30 +35,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         databaseArtists = FirebaseDatabase.getInstance().getReference("artists");
+        databaseProd = FirebaseDatabase.getInstance().getReference("products");
+        databaseDeliver = FirebaseDatabase.getInstance().getReference("delivers");
 
         etName = (EditText) findViewById(R.id.etNameMainActivity);
         spinner = (Spinner) findViewById(R.id.spCategorMainActivity);
-        btn = (Button) findViewById(R.id.btnMainActivity);
+        btnArtist = (Button) findViewById(R.id.btnUserMainActivity);
+        btnProd = (Button) findViewById(R.id.btnProdMainActivity);
+        btnDeliver = (Button) findViewById(R.id.btnDeliverMainActivity);
 
-        btn.setOnClickListener(this);
-
+        btnArtist.setOnClickListener(this);
+        btnProd.setOnClickListener(this);
+        btnDeliver.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        addArList();
+
+   /*     addArList();
     }
 
-    private void addArList() {
+    private void addArList() {*/
+
+
         String name = etName.getText().toString().trim();
         String name2 = etName.getText().toString().trim() + " second";
+        String name3 = etName.getText().toString().trim() + " third";
+        String name4 = etName.getText().toString().trim() + " fourth";
+        String name5 = etName.getText().toString().trim() + " fifth";
+
 
         if (!TextUtils.isEmpty(name)) {
             String id = databaseArtists.push().getKey();
-            Artist artist = new Artist(id, name, name2);
-            databaseArtists.child(id).setValue(artist);
-            Toast.makeText(this, "Artist added", Toast.LENGTH_SHORT).show();
+
+            switch (view.getId()) {
+                case R.id.btnUserMainActivity:
+
+                    Artist artist = new Artist(id, name, name2);
+                    databaseArtists.child(id).setValue(artist);
+                    break;
+                case R.id.btnProdMainActivity:
+                    Prod prod = new Prod(name, name2, name3, name4, name5);
+                    databaseProd.child(id).setValue(prod);
+                    break;
+                case R.id.btnDeliverMainActivity:
+                    Delivers deliv = new Delivers(name, name2, name3, name, name5);
+                    databaseDeliver.child(id).setValue(deliv);
+                    break;
+            }
+
+
+            Toast.makeText(this, "item added", Toast.LENGTH_SHORT).show();
 
         } else {
             Toast.makeText(this, "You should enter the name", Toast.LENGTH_SHORT).show();

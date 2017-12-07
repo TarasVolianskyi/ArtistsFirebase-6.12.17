@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         spinner = (Spinner) findViewById(R.id.spCategorMainActivity);
         btn = (Button) findViewById(R.id.btnMainActivity);
 
-btn.setOnClickListener(this);
-
+        btn.setOnClickListener(this);
 
 
     }
@@ -48,18 +47,18 @@ btn.setOnClickListener(this);
     }
 
     private void addArList() {
-String name = etName.getText().toString().trim();
-        String name2 = etName.getText().toString().trim()+" second";
+        String name = etName.getText().toString().trim();
+        String name2 = etName.getText().toString().trim() + " second";
 
-if(!TextUtils.isEmpty(name)){
-String id =    databaseArtists.push().getKey();
-    Artist artist = new Artist(id, name,name2);
-    databaseArtists.child(id).setValue(artist);
-    Toast.makeText(this, "Artist added", Toast.LENGTH_SHORT).show();
+        if (!TextUtils.isEmpty(name)) {
+            String id = databaseArtists.push().getKey();
+            Artist artist = new Artist(id, name, name2);
+            databaseArtists.child(id).setValue(artist);
+            Toast.makeText(this, "Artist added", Toast.LENGTH_SHORT).show();
 
-}else {
-    Toast.makeText(this, "You should enter the name", Toast.LENGTH_SHORT).show();
-}
+        } else {
+            Toast.makeText(this, "You should enter the name", Toast.LENGTH_SHORT).show();
+        }
 
 
     }
